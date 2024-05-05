@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music / By Quốc Bảo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="player">
+    <div class="dashboard">
+      <header>
+        <h3>Now playing:</h3>
+        <h1>String 57th & 9th</h1>
+      </header>
+      <div class="cd">
+        <div class="cd-thumb" style="background-image: url(./img/z5388742912811_235af1e0bb19993655c9fe0769e471e9.jpg);">
+        </div>
+      </div>
+      <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">
+      <div class="control">
+        <div class="btn btn-repeat">
+          <span class="material-symbols-outlined">
+            redo
+            </span>
+        </div>
+        <div class="btn btn-prev">
+          <i class="fa fa-step-backward"></i>
+        </div>
+        <div class="btn btn-toggle-play">
+          <i class="fa fa-pause icon-pause"></i>
+          <i class="fa fa-play icon-play"></i>
+        </div>
+        <div class="btn btn-next">
+          <i class="fa fa-step-forward"></i>
+        </div>
+        <div class="btn btn-random">
+          <i class="fa fa-random "></i>
+        </div>
+      </div>
+      
+      <audio id="audio" src=""></audio>
+    </div>
+
+    <div class="playlist">
+      <div class="song">
+        <!-- <div class="id1">
+          <div class="thumb">
+            <img src="img/1627913896146.jpg" alt="">
+         </div>
+          <div class="body">
+            <h2 class="title">Tên bài hát</h2>
+            <p class="author">Ca sĩ/Nhóm nhạc </p>
+          </div>
+          <div class="option">
+            <i class="fa fa-ellipsis-h"></i>
+          </div>
+        </div>
+       <div class="border"></div> -->
+       
+      </div>
+
+    </div>
+  </div>
+   <script src="index.js"></script>
+</body>
+
+</html>
