@@ -7,15 +7,14 @@
   margin-top: 10px;
   width: 785px;
   height: 1100px;
-  justify-content: center;
-  margin-left: 600px;
+  
+  margin-left: 400px;
   overflow: hidden;
   position: relative;
   overflow-y: scroll;
   transition: overflow-y 0.5s ease;
   cursor: pointer;
   box-shadow: 1px 1px 10px 8px rgba(0, 0, 0, 0.1);
-
 }
 .btn {
   color: rgb(255, 255, 255);
