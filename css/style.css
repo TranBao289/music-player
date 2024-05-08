@@ -15,6 +15,7 @@
   transition: overflow-y 0.5s ease;
   cursor: pointer;
   box-shadow: 1px 1px 10px 8px rgba(0, 0, 0, 0.1);
+
 }
 .btn {
   color: rgb(255, 255, 255);
@@ -155,6 +156,7 @@ input {
   padding: 1px 0px 3px 0px;
   min-width: 100%;
   overflow-y: scroll;
+  background:rgb(202, 255, 237);
 }
 .id1.active {
   background-color: rgb(255, 217, 0);
@@ -194,35 +196,51 @@ input {
 @media (max-width: 900px) {
   .player {
     margin: 0px;
-    width: 545px;
+    width: 505px;
+    box-shadow: 1px 1px 10px 8px rgba(0, 0, 0, 0.1);
   }
   .dashboard {
-    width: 505px;
+    width: 445px;
     height: auto;
+    border-radius: 4px;
   }
   .cd {
-    width: 100px;
+    width: 70px;
   }
   .cd-thumb {
     width: 100%;
   }
   input {
-    margin-top: -15px;
+    margin-top: -20px;
+  }
+  .control{
+    margin-top: -10px;
   }
   .playlist {
-    margin-top: 350px;
-    width: 510px;
+    margin-top: 290px;
+    width: 445px;
+    box-shadow: 1px 1px 10px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
   }
   .song {
     width: 110px;
   }
   .thumb img {
-    margin-left: -200px;
+    margin-left: -170px;
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+  }
+  .id1.active .thumb img {
+    width: 40px;
+    height: 40px;
   }
   .body {
-    margin-left: 350px;
+    margin-left: 300px;
+    font-size: 10px;
+    margin-top: -65px;
   }
   .option {
-    margin-left: 650px;
+    margin-left: 600px;
   }
 }
