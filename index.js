@@ -11,10 +11,13 @@ const progress = $('#progress')
 const nextBtn = $('.btn-next')
 const prevBtn = $('.btn-prev')
 const randomBtn = $('.btn-random')
+const repeatBtn = $('.btn-repeat')
+const song = $('.song')
 
 const app = {
   isRandom : false,
   isPlaying : false,
+  isRepeat : false,
   currentIndex :0 ,
   songs :[
     {    id: 1,
@@ -82,9 +85,9 @@ const app = {
 
 
   render: function(){
-    const htmls = this.songs.map(song =>{
+    const htmls = this.songs.map((song, index) =>{
       return `
-      <div class="id1">
+      <div class="id1 ${index === this.currentIndex ? 'active' : '' }" data-index = "${index}">
         <div class="thumb">
           <img src="${song.image}" alt="">
        </div>
@@ -100,7 +103,7 @@ const app = {
      `
     })
 
-    $('.song').innerHTML = htmls.join('')
+    song.innerHTML = htmls.join('')
   },
   defineProperties : function(){
     Object.defineProperty(this, 'currentSong',{
@@ -166,28 +169,77 @@ const app = {
     }
   }
   // xử lý khi tua 
-  progress.onchange = function(e){
+  progress.oninput = function(e){
    const seekTime =    audio.duration / 100 * e.target.value
    audio.currentTime = seekTime
   }
   // khi next
   nextBtn.onclick = function(){
-    _this.nextSong()
+    if(_this.isRandom){
+      _this.playRandomSong()
+    } else{
+      _this.nextSong()
+    }
     audio.play()
+    _this.render()
+    _this.scrollTopActiveSong()
   }
    // khi prev
   prevBtn.onclick = function(){
-    _this.prevSong()
+    if(_this.isRandom){
+      _this.playRandomSong()
+    } else{
+      _this.prevSong()
+    }
     audio.play()
+    _this.render()
+    _this.scrollTopActiveSong()
   }
-  randomBtn.onclick = function(e){
+  // khi random
+  randomBtn.onclick = function(e) {
     _this.isRandom = !_this.isRandom
-    randomBtn.classList.toggle('active',_this.isRandom)
+    randomBtn.classList.toggle('active', _this.isRandom)
+    
+  }
+    // lặp lại bài
+    repeatBtn.onclick = function(e){
+      _this.isRepeat = !_this.isRepeat
+      repeatBtn.classList.toggle('active', _this.isRepeat)
+    }
+
+  // xử lý next khi hết bài
+  audio.onended = function() {
+    if(_this.isRepeat){
+      audio.play()
+    } else{
+      nextBtn.click()
+    }
+  
+  }
+  // click vào bài hát
+  song.onclick = function(e){
+    if(e.target.closest('.id1:not(.active)') && !e.target.closest('.option')){
+      if(e.target.closest('.id1:not(.active)')){
+        _this.currentIndex = Number(e.target.closest('.id1:not(.active)').dataset.index)
+        _this.loadCurrentSong()
+        _this.render()
+        audio.play()
+            }
+      if(e.target.closest('.option')){
+        
+      }
+    }
   }
   },
+  scrollTopActiveSong: function() {
+    setTimeout( () => {
+      $('.id1.active').scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      })
+    },200)
+  },
  loadCurrentSong:function(){
-
-
   heading.textContent = this.currentSong.name
   cdThumb.style.backgroundImage = `url('${this.currentSong.image}')`
   audio.src = this.currentSong.path
@@ -206,7 +258,15 @@ const app = {
   }
   this.loadCurrentSong()
 },
+  playRandomSong: function(){
+    let newIndex
+    do{
+      newIndex = Math.floor(Math.random() * this.songs.length)
+    } while(newIndex === this.currentIndex)
 
+   this.currentIndex = newIndex
+   this.loadCurrentSong()
+  },
   start: function() {
     // định nghĩa các thuộc tính cho obj
     this.defineProperties()

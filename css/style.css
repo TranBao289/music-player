@@ -4,16 +4,17 @@
 
 .player{
   text-align: center;
-  margin-top: 50px;
-  width: 520px;
+  margin-top: 10px;
+  width: 785px;
   height: 1100px;
   justify-content: center;
-  margin-left: 720px;
+  margin-left: 600px;
   overflow: hidden;
  position: relative;
  overflow-y: scroll;
  transition: overflow-y 0.5s ease;
  cursor: pointer;
+ box-shadow: 1px 1px 10px 8px rgba(0, 0, 0, 0.1);
 }
 .btn{
   color: rgb(255, 255, 255);
@@ -30,26 +31,27 @@
 }
 .dashboard{
   /* background-color: rgb(217, 251, 255); */
-  background-image: url(https://png.pngtree.com/template/20220609/ourmid/pngtree-music-vinyl-background-record-vector-image_1826055.jpg);
+  background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20230803/pngtree-a-road-with-mountains-in-the-morning-image_12997705.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
-  margin-top: -19px;
-  box-shadow: 1px 1px 10px 8px rgba(0, 0, 0, 0.1);
-  position: relative;
-  width: 500px;
+  width: 745px;
   height: auto;
   overflow-y: scroll;
   margin-bottom: -20px;
   position: fixed;
   overflow: hidden;
   z-index: 900;
+  margin-left: 20px;
+  margin-top: 50px;
 }
 h3{
-  color: #ff5100;
-  margin-top: 30px;
+  color: #ffa600;
+  margin-top: 15px;
+  
 }
 h1{
-  color: white;
+  color: rgb(0, 0, 0);
+  
 }
 .cd{
   display: flex;
@@ -63,15 +65,21 @@ h1{
   padding-top: 100%;
   border-radius: 50%;
   background-size: cover;
-  margin: auto;
+  margin-bottom: 20px;
   
 }
 .cd.active {
   animation: soundBeats 2s infinite;
 }
+.btn-repeat.active{
+  color: black;
+}
+.btn-random.active{
+  color: black;
+}
  .thumb img{
 margin-left: -320px;
-margin-top: 15px;
+margin-top: 10px;
  border-radius: 50%;
  width: 50px;
  height: 50px;
@@ -85,12 +93,12 @@ font-size: 15px;
 }
 
 .option {
-  margin-left: 350px;
+  margin-left: 850px;
   margin-top: -50px;
 }
 .body {
   margin-top: -75px;
-  margin-left: 130px;
+  margin-left: 430px;
   text-align: left;
 }
 .title{
@@ -135,18 +143,19 @@ input{
   margin-top: 25px;
 }
 .playlist{
-  width: 500px;
+  width: 750px;
   height: 410px;
- margin-top: 440px;
+ margin-top: 500px;
 overflow: hidden;
 border-radius: 4px;
+margin-left: 20px;
 
 }
 .song{
  background-color: white;
   margin-top: 40px;
   border: 1px solid rgb(219, 219, 219);
-  width: 500px;
+  width: 750px;
   height: 410px;
   box-shadow: 1px 10px 10px 8px rgba(0, 0, 0, 0.1);
   padding: 1px 0px 3px 0px;
@@ -154,11 +163,23 @@ border-radius: 4px;
   overflow-y: scroll;
 
 }
+.id1.active{
+  background-color: rgb(255, 217, 0);
+}
+.id1.active .thumb img{
+  width: 60px;
+  height: 60px;
+}
 .border{
   border: 3px solid rgb(218, 218, 218);
 }
 .id1{
-  margin-bottom: 40px;
+  padding: 10px 0px 40px 0px;
+  margin-left: -200px;
+
+}
+.id1:active{
+  opacity: 0.6;
 }
 .song::-webkit-scrollbar{
   width: 5px;
@@ -178,4 +199,39 @@ border-radius: 4px;
 }
 .player.playing .icon-play {
   display: none;
+}
+@media (max-width:900px){
+.player{
+  margin: 0px;
+  width: 545px;
+}
+.dashboard{
+  width: 505px;
+  height: auto;
+}
+.cd{
+  width: 100px;
+}
+.cd-thumb{
+  width: 100%;
+}
+input{
+  margin-top: -15px;
+}
+.playlist{
+  margin-top: 350px;
+  width: 510px;
+}
+.song{
+  width: 110px;
+}
+.thumb img{
+  margin-left: -200px;
+}
+.body{
+  margin-left: 350px;
+}
+.option{
+  margin-left: 650px;
+}
 }
