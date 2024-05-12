@@ -8,7 +8,7 @@
   width: 785px;
   height: 1100px;
   
-  margin-left: 400px;
+  margin-left: 600px;
   overflow: hidden;
   position: relative;
   overflow-y: scroll;
@@ -243,3 +243,19 @@ input {
     margin-left: 600px;
   }
 }
+@media (min-width: 1921px){
+  .player{
+    margin-left: 450px;
+  }
+}
+@media(min-width:1024px) and (max-width:1910px){
+  .player{
+    margin-left: 150px;
+  }
+}
+@media(min-width:1920px){
+  .player{
+    margin-left: 450px;
+  }
+}
+
