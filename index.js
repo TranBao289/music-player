@@ -90,6 +90,13 @@ const app = {
       path: "assets/music/ThangTuLaLoiNoiDoiCuaEm-PhamToanThang-4426036.mp3",
       image: "img/thangtu.jpg",
     },
+    {
+      id: 11,
+      name: "Yêu từ đâu mà ra ?",
+      singer: "Hà Anh Tuấn ",
+      path: "assets/music/YeuTuDauMaRaLofiVersion-LilZpoet-6289013.mp3",
+      image: "img/yeutudaumara.jpg",
+    },
   ],
 
   render: function () {
