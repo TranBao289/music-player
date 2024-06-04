@@ -271,9 +271,9 @@ input {
     background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20230803/pngtree-a-road-with-mountains-in-the-morning-image_12997705.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
-    width: 300px;
+    width: 400px;
     height: auto;
-    margin-top: -10px;
+    margin-top: 0px;
     overflow: hidden;
     .cd{
       width: 50px;
@@ -295,8 +295,8 @@ input {
   }
   .playlist{
     font-size: 5px;
-    margin-top: 180px;
-    width: 300px;
+    margin-top: 200px;
+    width: 400px;
     position: fixed;
     .song{
       margin-top: 0px;
