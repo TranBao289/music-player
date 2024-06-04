@@ -192,11 +192,12 @@ input {
 .player.playing .icon-play {
   display: none;
 }
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
   .player {
     margin: 0px;
     width: 505px;
     box-shadow: 1px 1px 10px 8px rgba(0, 0, 0, 0.1);
+    
   }
   .dashboard {
     width: 445px;
@@ -247,6 +248,7 @@ input {
 @media(min-width:1024px) and (max-width:1910px){
   .player{
     margin-left: 150px;
+    
   }
 }
 @media(min-width:1920px){
@@ -254,4 +256,241 @@ input {
     margin-left: 450px;
   }
 }
-
+ */
+ @media(max-width : 740px) {
+  .player{
+    left: 0;
+    top: 0;
+    margin-left: -20px;
+    font-size: 13px;
+  }
+  header{
+    margin-top: -10px;
+  }
+  .dashboard{
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20230803/pngtree-a-road-with-mountains-in-the-morning-image_12997705.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 300px;
+    height: auto;
+    margin-top: -10px;
+    overflow: hidden;
+    .cd{
+      width: 50px;
+      margin-top: -10px;
+    }
+    #progress{
+      margin-top: -30px;
+      width: 250px;
+    }
+    .control{
+      font-size: 10px;
+      margin-top: -20px;
+    }
+    .btn-toggle-play {
+      color: black;
+      height: 30px;
+      width: 30px;
+    }
+  }
+  .playlist{
+    font-size: 5px;
+    margin-top: 180px;
+    width: 300px;
+    position: fixed;
+    .song{
+      margin-top: 0px;
+    }
+  .thumb img{
+    width: 30px;
+    height: 30px;
+    margin-left: -480px;
+    margin-top: -5px;
+  }
+  .id1{
+    margin-top: 10px;
+  }
+  .id1.active .thumb img {
+    width: 40px;
+    height: 40px;
+  }
+  .author {
+    margin-top: -10px;
+    font-weight: lighter;
+    font-size: 13px;
+  }
+  
+  .option {
+    margin-left: 0px;
+    margin-top: -50px;
+    font-size: 15px;
+  }
+  .body {
+    margin-top: -50px;
+    margin-left: 280px;
+    text-align: left;
+ 
+  }
+  .title {
+    font-size: 15px;
+  }
+  }
+  
+ }
+ 
+ @media(min-width:600px) and (max-width:1023px) {
+  .player{
+    top: 0;
+   left: 10px;
+    font-size: 15px;
+  }
+  header{
+    margin-top: 0px;
+  }
+  .dashboard{
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20230803/pngtree-a-road-with-mountains-in-the-morning-image_12997705.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 550px;
+    height: auto;
+    margin-top: 0px;
+    overflow: hidden;
+    .cd{
+      width: 100px;
+      margin-top: 10px;
+    }
+    #progress{
+      margin-top: -30px;
+      width: 250px;
+    }
+    .control{
+      font-size: 10px;
+      margin-top: -20px;
+    }
+    .btn-toggle-play {
+      color: black;
+      height: 30px;
+      width: 30px;
+    }
+  }
+  .playlist{
+    font-size: 10px;
+    margin-top: 285px;
+    width: 550px;
+    position: fixed;
+    .song{
+      margin-top: 0px;
+    }
+  .thumb img{
+    width: 50px;
+    height: 50px;
+    margin-left: -450px;
+    margin-top: -5px;
+  }
+  .id1{
+    margin-top: 10px;
+  }
+  .id1.active .thumb img {
+    width: 60px;
+    height: 60px;
+  }
+  .author {
+    margin-top: 0px;
+    font-weight: lighter;
+    font-size: 15px;
+  }
+  
+  .option {
+    margin-left: 400px;
+    margin-top: -50px;
+    font-size: 15px;
+  }
+  .body {
+    margin-top: -70px;
+    margin-left: 400px;
+ 
+  }
+  .title {
+    font-size: 20px;
+  }
+  }
+  
+ }
+ @media(min-width:741px) and (max-width:1023px) {
+  .player{
+    top: 0;
+    left: -610px;
+    font-size: 15px;
+  }
+  header{
+    margin-top: 0px;
+  }
+  .dashboard{
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20230803/pngtree-a-road-with-mountains-in-the-morning-image_12997705.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 740px;
+    height: auto;
+    margin-top: 0px;
+    overflow: hidden;
+    .cd{
+      width: 130px;
+      margin-top: 10px;
+    }
+    #progress{
+      margin-top: -30px;
+      width: 250px;
+    }
+    .control{
+      font-size: 20px;
+      margin-top: -20px;
+    }
+    .btn-toggle-play {
+      color: black;
+      height: 50px;
+      width: 50px;
+    }
+  }
+  .playlist{
+    font-size: 10px;
+    margin-top: 320px;
+    width: 750px;
+    position: fixed;
+    .song{
+      margin-top: 0px;
+    }
+  .thumb img{
+    width: 50px;
+    height: 50px;
+    margin-left: -400px;
+    margin-top:20px;
+  }
+  .id1{
+    margin-top: 10px;
+  }
+  .id1.active .thumb img {
+    width: 60px;
+    height: 60px;
+  }
+  .author {
+    margin-top: 0px;
+    font-weight: lighter;
+    font-size: 20px;
+  }
+  
+  .option {
+    margin-left: 800px;
+    margin-top: -50px;
+    font-size: 15px;
+  }
+  .body {
+    margin-top: -80px;
+    margin-left: 400px;
+ 
+  }
+  .title {
+    font-size: 25px;
+  }
+  }
+  
+ }
